@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CM to FEET</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>cm to Feet</h2>
+        <div class="inputdiv">
+            <input type="text" id="Number" placeholder="Height in cm">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Convert to Feet
+
+            </button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script>
+    function convert(){
+        const cmVal=Number(document.getElementById("Number").value)
+        const feetVal=cmVal*0.0328084
+        const output=document.getElementById("output")
+        output.innerHTML=feetVal.toFixed(2)+"Feet"
+    }
+
+    </script>
+    
+</body>
+</html>
